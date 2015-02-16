@@ -1,5 +1,6 @@
 use strict;
 use warnings;
+use 5.010;
 use Test::More tests => 4;
 use Alien::FFI;
 use ExtUtils::CBuilder;
@@ -19,7 +20,7 @@ ok -r $obj, "compile";
 
 my($exe, @rest) = eval {
   $b->link_executable(
-    objects => $obj,
+    objects            => $obj,
     extra_linker_flags => Alien::FFI->libs,
   );
 };

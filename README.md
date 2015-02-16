@@ -2,6 +2,28 @@
 
 Simplified alternative to Alien::FFI that uses system libffi
 
+# SYNOPSIS
+
+    env PERL_ALT_INSTALL=OVERWRITE cpanm Alt::Alien::FFI::System
+
+# DESCRIPTION
+
+This distribution provides an alternative implementation of
+[Alien::FFI](https://metacpan.org/pod/Alien::FFI) that is geared toward system integrators when
+libffi is provided by the operating system.  It requires 
+Perl 5.10 or better, but has no non-core requirements.
+
+It will NOT attempt to download or install libffi.  If you
+need that, then install the original [Alien::FFI](https://metacpan.org/pod/Alien::FFI) instead.
+
+# SEE ALSO
+
+- [Alt](https://metacpan.org/pod/Alt)
+- [Alien::FFI](https://metacpan.org/pod/Alien::FFI)
+- [FFI::Platypus](https://metacpan.org/pod/FFI::Platypus)
+- [FFI::Raw](https://metacpan.org/pod/FFI::Raw)
+- [FFI::CheckLib](https://metacpan.org/pod/FFI::CheckLib)
+
 # AUTHOR
 
 Graham Ollis <plicease@cpan.org>
