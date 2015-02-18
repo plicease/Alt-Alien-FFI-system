@@ -47,6 +47,7 @@ sub cflags
   {
     $cflags = `$pkg_config --cflags libffi`;
     $cflags = '' unless $? == 0;
+    chomp $cflags;
   }
   
   $cflags;
@@ -60,6 +61,7 @@ sub libs
   {
     $libs = `$pkg_config --libs libffi`;
     $libs = '-lffi' unless $? == 0;
+    chomp $libs;
   }
   
   $libs;
