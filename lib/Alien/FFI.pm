@@ -3,6 +3,7 @@ package Alien::FFI;
 use strict;
 use warnings;
 use 5.010;
+use Carp qw( croak );
 
 # ABSTRACT: Get libffi compiler and linker flags
 # VERSION
@@ -65,6 +66,11 @@ sub libs
   }
   
   $libs;
+}
+
+sub dist_dir
+{
+  croak "Failed to find share dir for dist 'Alt-Alien-FFI-System'";
 }
 
 1;
