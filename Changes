@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.08      2015-02-24 12:29:29 -0500
   - Add dist_dir method that just croaks (compat with Alien::FFI)
 
 0.07      2015-02-16 18:17:42 -0500
