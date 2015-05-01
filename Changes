@@ -2,6 +2,9 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
+0.11      2015-05-01 15:06:35 -0400
+  - New version to match current Alien::FFI
+
 0.10      2015-04-22 07:33:20 -0400
   - New version to match current Alien::FFI
 
