@@ -10,8 +10,8 @@ Simplified alternative to Alien::FFI that uses system libffi
 
 This distribution provides an alternative implementation of
 [Alien::FFI](https://metacpan.org/pod/Alien::FFI) that is geared toward system integrators when
-libffi is provided by the operating system.  It requires 
-Perl 5.10 or better, but has no non-core requirements.
+libffi is provided by the operating system.  It has no non-core
+requirements.
 
 It will NOT attempt to download or install libffi.  If you
 need that, then install the original [Alien::FFI](https://metacpan.org/pod/Alien::FFI) instead.
