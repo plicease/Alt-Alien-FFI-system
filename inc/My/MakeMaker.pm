@@ -1,7 +1,7 @@
 package inc::My::MakeMaker;
 
 use Moose;
-use 5.010;
+use 5.008001;
 
 extends 'Dist::Zilla::Plugin::MakeMaker';
 
@@ -16,8 +16,6 @@ around setup_installer => sub {
   my($file) = grep { $_->name eq 'Makefile.PL' } @{ $self->zilla->files };
   
   my $content = $file->content;
-  
-  state $extra;
   
   $extra = do { local $/; <DATA> } unless $extra;
   

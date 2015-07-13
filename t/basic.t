@@ -1,6 +1,6 @@
 use strict;
 use warnings;
-use 5.010;
+use 5.008001;
 use Test::More tests => 4;
 use Alien::FFI;
 use ExtUtils::CBuilder;

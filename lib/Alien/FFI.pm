@@ -2,7 +2,7 @@ package Alien::FFI;
 
 use strict;
 use warnings;
-use 5.010;
+use 5.008001;
 use Carp qw( croak );
 
 # ABSTRACT: Get libffi compiler and linker flags
@@ -40,10 +40,10 @@ sub install_type
   'system';
 }
 
+my $cflags;
+
 sub cflags
 {
-  state $cflags;
-  
   unless(defined $cflags)
   {
     $cflags = `$pkg_config --cflags libffi`;
@@ -54,10 +54,10 @@ sub cflags
   $cflags;
 }
 
+my $libs;
+
 sub libs
 {
-  state $libs;
-  
   unless(defined $libs)
   {
     $libs = `$pkg_config --libs libffi`;
