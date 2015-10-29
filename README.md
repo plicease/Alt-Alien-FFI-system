@@ -26,7 +26,7 @@ need that, then install the original [Alien::FFI](https://metacpan.org/pod/Alien
 
 # AUTHOR
 
-Graham Ollis <plicease@cpan.org>
+Graham Ollis &lt;plicease@cpan.org>
 
 # COPYRIGHT AND LICENSE
 
