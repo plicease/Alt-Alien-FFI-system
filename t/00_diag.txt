@@ -1,3 +1,0 @@
-ExtUtils::CBuilder
-ExtUtils::MakeMaker
-Test::More
