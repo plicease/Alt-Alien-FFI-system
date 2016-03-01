@@ -2,6 +2,9 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
+0.14      2016-03-01 12:53:58 -0500
+  - New version to match current Alien::FFI
+
 0.12      2015-07-13 12:58:29 -0400
   - Drop required perl down to 5.8.1
 
