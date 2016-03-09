@@ -1,4 +1,4 @@
-# Alt::Alien::FFI::System
+# Alt::Alien::FFI::System [![Build Status](https://secure.travis-ci.org/plicease/Alt-Alien-FFI-System.png)](http://travis-ci.org/plicease/Alt-Alien-FFI-System)
 
 Simplified alternative to Alien::FFI that uses system libffi
 
@@ -27,7 +27,7 @@ need that, then install the original [Alien::FFI](https://metacpan.org/pod/Alien
 
 # AUTHOR
 
-Graham Ollis &lt;plicease@cpan.org>
+Graham Ollis <plicease@cpan.org>
 
 # COPYRIGHT AND LICENSE
 

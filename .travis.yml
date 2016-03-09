@@ -3,6 +3,7 @@ sudo: false
 
 install:
   - perlbrew list
+  - cpanm https://dist.wdlabs.com/Dist-Zilla-Plugin-Alt-0.01.tar.gz
   - dzil authordeps --missing | cpanm -n
   - dzil listdeps --missing | cpanm -n
 
