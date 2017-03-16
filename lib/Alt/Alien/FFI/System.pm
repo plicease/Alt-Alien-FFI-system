@@ -16,9 +16,9 @@ use 5.008001;
 This distribution provides an alternative implementation of
 L<Alien::FFI> that is geared toward system integrators when
 libffi is provided by the operating system.  It has no non-core
-requirements for runtume as of Perl 5.10 (it does require 
-L<ExtUtils::CBuilder> which was non-core in 5.8).  It does
-use L<Test::Alien> for consistency with the original.
+requirements for runtume as of Perl 5.8.  It now uses
+use L<Test::Alien> for consistency with the original
+L<Alien::FFI>.
 
 It will NOT attempt to download or install libffi.  If you
 need that, then install the original L<Alien::FFI> instead.

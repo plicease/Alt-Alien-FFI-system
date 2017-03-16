@@ -11,9 +11,9 @@ Simplified alternative to Alien::FFI that uses system libffi
 This distribution provides an alternative implementation of
 [Alien::FFI](https://metacpan.org/pod/Alien::FFI) that is geared toward system integrators when
 libffi is provided by the operating system.  It has no non-core
-requirements for runtume as of Perl 5.10 (it does require 
-[ExtUtils::CBuilder](https://metacpan.org/pod/ExtUtils::CBuilder) which was non-core in 5.8).  It does
-use [Test::Alien](https://metacpan.org/pod/Test::Alien) for consistency with the original.
+requirements for runtume as of Perl 5.8.  It now uses
+use [Test::Alien](https://metacpan.org/pod/Test::Alien) for consistency with the original
+[Alien::FFI](https://metacpan.org/pod/Alien::FFI).
 
 It will NOT attempt to download or install libffi.  If you
 need that, then install the original [Alien::FFI](https://metacpan.org/pod/Alien::FFI) instead.

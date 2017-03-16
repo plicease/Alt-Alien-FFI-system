@@ -10,7 +10,6 @@ my %modules;
 my $post_diag;
 
 $modules{$_} = $_ for qw(
-  ExtUtils::CBuilder
   ExtUtils::MakeMaker
   IPC::Cmd
   Test2::Suite
