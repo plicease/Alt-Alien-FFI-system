@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.15_01   2017-03-16 17:48:29 -0400
   - Use the same test as the real Alien::FFI
   - Configure step no longer does a compile/link test
   - Honor PKG_CONFIG environment variable
