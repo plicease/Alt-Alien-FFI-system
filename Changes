@@ -1,6 +1,10 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - Use the same test as the real Alien::FFI
+  - Configure step no longer does a compile/link test
+  - Honor PKG_CONFIG environment variable
+  - Try pkgconf if pkg-config is not available
 
 0.14      2016-03-01 12:53:58 -0500
   - New version to match current Alien::FFI

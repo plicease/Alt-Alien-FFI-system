@@ -29,10 +29,30 @@ sub new
   bless {}, $class;
 }
 
-my $pkg_config = 'pkg-config';
-if(eval q{ use PkgConfig (); 1 })
+my $pkg_config;
+
+foreach my $try ($ENV{PKG_CONFIG}, 'pkg-config', 'pkgconf')
 {
-  $pkg_config = "$^X $INC{'PkgConfig.pm'}";
+  next unless defined $try;
+  require IPC::Cmd;
+  if(IPC::Cmd::can_run($try))
+  {
+    $pkg_config = $try;
+    last;
+  }
+}
+
+unless($pkg_config)
+{
+  if(eval q{ use PkgConfig (); 1 })
+  {
+    $pkg_config = "$^X $INC{'PkgConfig.pm'}";
+  }
+}
+
+unless($pkg_config)
+{
+  die "unable to find pkg-config, pkgconf or PkgConfig.pm";
 }
 
 sub install_type
@@ -40,37 +60,63 @@ sub install_type
   'system';
 }
 
-my $cflags;
+my $config;
 
-sub cflags
+sub config
 {
-  unless(defined $cflags)
+  my(undef, $key) = @_;
+
+  unless($config)
   {
-    $cflags = `$pkg_config --cflags libffi`;
-    $cflags = '' unless $? == 0;
-    chomp $cflags;
+    my $version = `$pkg_config --modversion libffi`;
+    die "package libffi not found" if $?;
+    chomp $version;
+    $config = {
+      version    => $version,
+      pkg_config => $pkg_config,
+    };
   }
   
-  $cflags;
+  $config->{$key};
 }
 
-my $libs;
-
-sub libs
+foreach my $linkage ('share','static')
 {
-  unless(defined $libs)
+  foreach my $name ('cflags','libs')
   {
-    $libs = `$pkg_config --libs libffi`;
-    $libs = '-lffi' unless $? == 0;
-    chomp $libs;
+    my $value;
+    
+    my $flags = "--$name";
+    my $subname = $name;
+    if($linkage eq 'static')
+    {
+      $flags .= ' --static' if $linkage eq 'static';
+      $subname .= '_static' if $linkage 
+    }
+    
+    my $sub = sub {
+      unless(defined $value)
+      {
+        print "command = $pkg_config $flags libffi\n";
+        $value = `$pkg_config $flags libffi`;
+        die "package libffi not found" if $?;
+        chomp $value;
+      }
+      $value;
+    };
+
+    no strict 'refs';
+    *$subname = $sub;
   }
-  
-  $libs;
 }
 
 sub dist_dir
 {
   croak "Failed to find share dir for dist 'Alt-Alien-FFI-System'";
 }
+
+sub bin_dir { () }
+sub dynamic_libs { () }
+sub version { shift->config('version') }
 
 1;

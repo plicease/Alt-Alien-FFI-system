@@ -12,10 +12,21 @@ my $post_diag;
 $modules{$_} = $_ for qw(
   ExtUtils::CBuilder
   ExtUtils::MakeMaker
+  IPC::Cmd
+  Test2::Suite
+  Test::Alien
   Test::More
 );
 
-
+$post_diag = sub {
+  require Alien::FFI;
+  diag "pkg-config     = ", Alien::FFI->config('pkg_config');
+  diag "version        = ", Alien::FFI->config('version');
+  diag "cflags         = ", Alien::FFI->cflags;
+  diag "cflags_static  = ", Alien::FFI->cflags_static;
+  diag "libs           = ", Alien::FFI->libs;
+  diag "libs_static    = ", Alien::FFI->libs_static;
+};
 
 my @modules = sort keys %modules;
 
