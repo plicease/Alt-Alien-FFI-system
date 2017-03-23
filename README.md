@@ -11,7 +11,7 @@ Simplified alternative to Alien::FFI that uses system libffi
 This distribution provides an alternative implementation of
 [Alien::FFI](https://metacpan.org/pod/Alien::FFI) that is geared toward system integrators when
 libffi is provided by the operating system.  It has no non-core
-requirements for runtume as of Perl 5.8.  It now uses
+requirements for runtime as of Perl 5.8.  It now uses
 use [Test::Alien](https://metacpan.org/pod/Test::Alien) for consistency with the original
 [Alien::FFI](https://metacpan.org/pod/Alien::FFI).
 

@@ -2,6 +2,9 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
+0.16      2017-03-23 08:02:18 -0400
+  - Production release identical to 0.15_01
+
 0.15_01   2017-03-16 17:48:29 -0400
   - Use the same test as the real Alien::FFI
   - Configure step no longer does a compile/link test
