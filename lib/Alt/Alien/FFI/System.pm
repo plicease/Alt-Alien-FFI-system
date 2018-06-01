@@ -33,8 +33,6 @@ need that, then install the original L<Alien::FFI> instead.
 
 =item L<FFI::Platypus>
 
-=item L<FFI::Raw>
-
 =item L<FFI::CheckLib>
 
 =back

@@ -23,7 +23,6 @@ need that, then install the original [Alien::FFI](https://metacpan.org/pod/Alien
 - [Alt](https://metacpan.org/pod/Alt)
 - [Alien::FFI](https://metacpan.org/pod/Alien::FFI)
 - [FFI::Platypus](https://metacpan.org/pod/FFI::Platypus)
-- [FFI::Raw](https://metacpan.org/pod/FFI::Raw)
 - [FFI::CheckLib](https://metacpan.org/pod/FFI::CheckLib)
 
 # AUTHOR
