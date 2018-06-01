@@ -18,6 +18,16 @@ use [Test::Alien](https://metacpan.org/pod/Test::Alien) for consistency with the
 It will NOT attempt to download or install libffi.  If you
 need that, then install the original [Alien::FFI](https://metacpan.org/pod/Alien::FFI) instead.
 
+# CAVEATS
+
+[Test::Alien](https://metacpan.org/pod/Test::Alien) is now part of [Alien::Build](https://metacpan.org/pod/Alien::Build), so if you
+need to run the tests, the prereqs aren't that much lighter
+than the real [ALien::FFI](https://metacpan.org/pod/ALien::FFI), so you should consider:
+
+- do your own testing
+- skip tests
+- switch to the real Alien::FFI
+
 # SEE ALSO
 
 - [Alt](https://metacpan.org/pod/Alt)

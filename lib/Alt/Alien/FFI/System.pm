@@ -23,6 +23,22 @@ L<Alien::FFI>.
 It will NOT attempt to download or install libffi.  If you
 need that, then install the original L<Alien::FFI> instead.
 
+=head1 CAVEATS
+
+L<Test::Alien> is now part of L<Alien::Build>, so if you
+need to run the tests, the prereqs aren't that much lighter
+than the real L<ALien::FFI>, so you should consider:
+
+=over 4
+
+=item do your own testing
+
+=item skip tests
+
+=item switch to the real Alien::FFI
+
+=back
+
 =head1 SEE ALSO
 
 =over 4
