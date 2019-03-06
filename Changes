@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.22      2019-03-06 09:48:17 -0500
   - This module is now DEPRECATED in favor of just
     installing FFI-Platypus with pkg-config and libffi
     already installed.
