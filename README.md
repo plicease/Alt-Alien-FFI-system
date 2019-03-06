@@ -1,4 +1,4 @@
-# Alt::Alien::FFI::System [![Build Status](https://secure.travis-ci.org/plicease/Alt-Alien-FFI-System.png)](http://travis-ci.org/plicease/Alt-Alien-FFI-System)
+# Alt::Alien::FFI::System [![Build Status](https://secure.travis-ci.org/Perl5-FFI/Alt-Alien-FFI-System.png)](http://travis-ci.org/Perl5-FFI/Alt-Alien-FFI-System)
 
 (Deprecated) Simplified alternative to Alien::FFI that uses system libffi
 
