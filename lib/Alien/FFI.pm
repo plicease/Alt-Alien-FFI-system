@@ -97,7 +97,7 @@ foreach my $linkage ('share','static')
     my $sub = sub {
       unless(defined $value)
       {
-        print "command = $pkg_config $flags libffi\n";
+        #print "command = $pkg_config $flags libffi\n";
         $value = `$pkg_config $flags libffi`;
         die "package libffi not found" if $?;
         chomp $value;
