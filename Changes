@@ -1,6 +1,9 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - This module is now DEPRECATED in favor of just
+    installing FFI-Platypus with pkg-config and libffi
+    already installed.
 
 0.21      2018-06-01 07:57:41 -0400
   - Update to match the real Alien::FFI 0.21
